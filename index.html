@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="setup-container">
+      <p class="title-setup">Tic Tac Toe Setup</p>
+      <div id="game-mode-selection">
+        <h2>Select Game Mode</h2>
+        <select id="game-mode">
+          <option value="human-vs-human">Human vs Human</option>
+          <option value="human-vs-computer">Human vs Computer</option>
+        </select>
+      </div>
+      <div id="computer-difficulty" style="display: none;">
+        <h3>Select Computer Difficulty</h3>
+        <select id="difficulty-level">
+          <option value="easy">Easy Cake</option>
+          <option value="nightmare">Nightmare</option>
+        </select>
+      </div>
+      <div class="player-setup" id="player1-setup">
+        <h2>Player 1</h2>
+        <input type="text" id="player1-name" placeholder="Enter Plater 1 name" />
+      </div>
+      <div class="player-setup" id="player2-setup">
+        <h2>Player 2</h2>
+        <input type="text" id="player2-name" placeholder="Enter Player 2 name" />
+      </div>
+      <button id="start-game">Start Game</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+      <header>
+        <h1>Tic Tac Toe</h1>
+      </header>
+      <div id="players-info">
+        <div id="player1-info" class="player-info">
+          <img id="player1-avatar" class="player-avatar" src="" alt="Player 1 Avatar" />
+          <div id="player1-display-name" class="player-name"></div>
+        </div>
+        <div id="game-content">
+          <div id="board">
+            <div class="row">
+              <div class="cell" data-index="0"></div>
+              <div class="cell" data-index="1"></div>
+              <div class="cell" data-index="2"></div>
+            </div>
+            <div class="row">
+              <div class="cell" data-index="3"></div>
+              <div class="cell" data-index="4"></div>
+              <div class="cell" data-index="5"></div>
+            </div>
+            <div class="row">
+              <div class="cell" data-index="6"></div>
+              <div class="cell" data-index="7"></div>
+              <div class="cell" data-index="8"></div>
+            </div>
+          </div>
+          <div id="status"></div>
+          <button id="new-game">New Game</button>
+        </div>
+        <div id="player2-info" class="player-info">
+          <img id="player2-avatar" class="player-avatar" src="" alt="Player 2 Avatar" />
+          <div id="player2-display-name" class="player-name"></div>
+        </div>
+      </div>
+      <div id="leaderboard-panel">
+        <h2>Leaderboard</h2>
+        <ol id="leaderboard"></ol>
+      </div>
+    </div>
+
+    <div id="winner-overlay" class="winner-overlay hidden">
+      <h1 id="winner-title"></h1>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
